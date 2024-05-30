@@ -2,7 +2,7 @@
 
 # FedGNNRec
 
-ProjectName and Description
+一个基于图神经网络的隐私保护联邦推荐框架
 
 <!-- PROJECT SHIELDS -->
 
