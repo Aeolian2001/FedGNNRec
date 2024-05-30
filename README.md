@@ -1,6 +1,6 @@
 
 
-# ProjectName
+# FedGNNRec
 
 ProjectName and Description
 
