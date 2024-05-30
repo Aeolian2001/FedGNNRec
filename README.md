@@ -10,10 +10,9 @@
 - [上手指南](#上手指南)
   - [环境配置](#环境配置)
   - [安装步骤](#安装步骤)
-- [文件目录说明](#文件目录说明)
-- [开发的架构](#开发的架构)
-- [部署](#部署)
-- [使用到的框架](#使用到的框架)
+- [文件目录](#文件目录)
+- [架构](#架构)
+- [运行](#运行)
 - [贡献者](#贡献者)
   - [如何参与开源项目](#如何参与开源项目)
 - [版本控制](#版本控制)
@@ -38,7 +37,7 @@
 * 可在colab平台上运行，需要安装dgl和pycryptodom相关库
 
 
-### 文件目录说明
+### 文件目录
 ```
 filetree 
 ├── README.md
@@ -68,19 +67,18 @@ filetree
 
 
 
-### 开发的架构 
+### 架构 
+```
 
-请阅读[ARCHITECTURE.md](https://github.com/shaojintian/Best_README_template/blob/master/ARCHITECTURE.md) 查阅为该项目的架构。
+```
 
-### 部署
 
-暂无
+### 运行
+1. 下载ML-100K、Douban、Flixster数据集并进行处理，或者直接使用文件中提供的已处理的数据集
+2. 选取超参数和模型
+3. 运行 main.py 文件
 
-### 使用到的框架
 
-- [xxxxxxx](https://getbootstrap.com)
-- [xxxxxxx](https://jquery.com)
-- [xxxxxxx](https://laravel.com)
 
 ### 贡献者
 
