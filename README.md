@@ -62,14 +62,19 @@ filetree
 
 
 ### 架构 
-* server:服务器，主要属性包括用户表user_list、物品表item_list、物品嵌入表item_embedding和全局模型model等，重要方法有聚合算法aggregator()和训练方法train()
-* client:用户设备，主要属性包括用户IDself_id,本地图graph和本地模型model等，重要方法有本地差分隐私LDP()、伪随机抽样pseudo_sample_item()和训练方法train()
-* tp_server:第三方服务器，主要属性包括用户邻接表nei_list和用户嵌入表user_embedding，主要方法有匹配邻居算法matching()、分发嵌入expanding()和梯度更新update_embedding()
+* server.py:服务器，主要属性包括用户表user_list、物品表item_list、物品嵌入表item_embedding和全局模型model等，重要方法有聚合算法aggregator()和训练方法train()
+* client.py:用户设备，主要属性包括用户IDself_id,本地图graph和本地模型model等，重要方法有本地差分隐私LDP()、伪随机抽样pseudo_sample_item()和训练方法train()
+* tp_server.py:第三方服务器，主要属性包括用户邻接表nei_list和用户嵌入表user_embedding，主要方法有匹配邻居算法matching()、分发嵌入expanding()和梯度更新update_embedding()
 ```
-![image](https://github.com/Aeolian2001/FedGNNRec/assets/81081343/1c1a71d1-a788-4b01-ab7c-43f251e98ff4)
-
+该联邦推荐框架包括服务器、用户设备(客户端)和第三方服务器，彼此并列
+1. 在训练开始前，client调用encrypt.py中的加密方法加密数据，并将加密后数据上传至tp_server，调用tp_server中matching()和expanding()完成图扩展
+2. 每轮训练中server.train()，server选取一定数量的client并分发全局参数,调用client中的train()方法完成client本地训练，所有client训练完成上传梯度后，server调用aggregator()方法聚合梯度
+3. client训练得到梯度后，上传前调用LDP()和pseudo_sample_item()实现隐私保护
 ```
-
+* encrypt.py:加密方法
+* utils.py:数据集处理方法和指标计算方法
+* model.py:图神经网络模型
+* main.py:数据集处理、训练流程、指标计算
 
 ### 运行
 1. 下载ML-100K、Douban、Flixster数据集并进行处理，或者直接使用文件中提供的已处理的数据集
