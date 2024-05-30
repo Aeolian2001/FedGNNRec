@@ -9,7 +9,7 @@
 
 - [上手指南](#上手指南)
   - [环境配置](#环境配置)
-  - [安装步骤](#安装步骤)
+  - [配置问题](#配置问题)
 - [文件目录](#文件目录)
 - [架构](#架构)
 - [运行](#运行)
@@ -25,7 +25,7 @@
 5. dgl          2.1.0
 6. pycryptodome 3.12.0
 
-###### **安装步骤**
+###### **配置问题**
 根据需求配置环境，若有问题，则：
 * pycryptodome可能与crypto冲突，若出现此情况请卸载其中一个
 * 请根据报错请自行安装所需包或调配环境
@@ -66,6 +66,7 @@ filetree
 * client:用户设备，主要属性包括用户IDself_id,本地图graph和本地模型model等，重要方法有本地差分隐私LDP()、伪随机抽样pseudo_sample_item()和训练方法train()
 * tp_server:第三方服务器，主要属性包括用户邻接表nei_list和用户嵌入表user_embedding，主要方法有匹配邻居算法matching()、分发嵌入expanding()和梯度更新update_embedding()
 ```
+![image](https://github.com/Aeolian2001/FedGNNRec/assets/81081343/1c1a71d1-a788-4b01-ab7c-43f251e98ff4)
 
 ```
 
