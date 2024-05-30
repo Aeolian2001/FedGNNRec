@@ -39,29 +39,32 @@
 
 
 ### 文件目录说明
-eg:
-
 ```
 filetree 
-├── ARCHITECTURE.md
-├── LICENSE.txt
 ├── README.md
-├── /account/
-├── /bbs/
-├── /docs/
-│  ├── /rules/
-│  │  ├── backend.txt
-│  │  └── frontend.txt
-├── manage.py
-├── /oa/
-├── /static/
-├── /templates/
-├── useless.md
-└── /util/
-
+├── ml_100k.mat
+├── dataset
+│  ├── db
+│  │  ├── douban.mat
+│  │  ├── ...
+│  │  └── douban_5.mat
+│  ├── fl
+│  │  ├── flixster.mat
+│  │  ├── ...
+│  │  └── flixste_5.mat
+│  ├── ml
+│  │  ├── ml_100k_2.mat
+│  │  ├── ...
+│  │  └── ml_100k_5.mat
+├── client.py
+├── tp_server.py
+├── encrypt.py
+├── main.py
+├── model.py
+├── utils.py
+├── server.py
+└── text.py
 ```
-
-
 
 
 
