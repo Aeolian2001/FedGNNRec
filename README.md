@@ -1,5 +1,3 @@
-
-
 # FedGNNRec
 
 一个基于图神经网络的隐私保护联邦推荐框架
@@ -10,7 +8,7 @@
 ## 目录
 
 - [上手指南](#上手指南)
-  - [开发前的配置要求](#开发前的配置要求)
+  - [环境配置](#环境配置)
   - [安装步骤](#安装步骤)
 - [文件目录说明](#文件目录说明)
 - [开发的架构](#开发的架构)
@@ -24,23 +22,24 @@
 
 ### 上手指南
 
-请将所有链接中的“shaojintian/Best_README_template”改为“your_github_name/your_repository”
 
 
+###### 环境配置
 
-###### 开发前的配置要求
+1. Ubuntu       18.04
+2. python       3.7.11
+3. numpy        1.25.2
+4. pytorch      1.7.1
+5. dgl          2.1.0
+6. pycryptodome 3.12.0
 
-1. xxxxx x.x.x
-2. xxxxx x.x.x
+注：
+* pycryptodome可能与crypto冲突，若出现此情况请卸载其中一个
+* 若出现问题，请根据报错请自行安装所需包
 
 ###### **安装步骤**
+略
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-
-```sh
-git clone https://github.com/shaojintian/Best_README_template.git
-```
 
 ### 文件目录说明
 eg:
