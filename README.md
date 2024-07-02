@@ -3,7 +3,7 @@
 一个基于图神经网络的隐私保护联邦推荐框架
 
 <!-- PROJECT SHIELDS -->
-[![MIT License][license-shield]][license-url]
+
  
 ## 目录
 
